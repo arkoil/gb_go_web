@@ -9,10 +9,10 @@ import (
 func TestFileLoad(t *testing.T) {
 	link := "https://yadi.sk/i/xV3LGCEwax8RfA"
 	path, err := yaloader.FileLoader(link)
-	if err != nil{
+	if err != nil {
 		t.Error(err)
 	}
-	if !fileExists(path){
+	if !fileExists(path) {
 		t.Error(err)
 	}
 }

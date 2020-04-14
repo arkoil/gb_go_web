@@ -19,7 +19,7 @@ type FData struct {
 const APIURL string = "https://cloud-api.yandex.net/v1/disk/public/resources/download"
 const SaveDir string = "download/"
 
-func FileLoader(link string) (path string,err error) {
+func FileLoader(link string) (path string, err error) {
 	downloadURL, err := APIRequest(link)
 	checkError(err)
 	uri, err := url.Parse(downloadURL)
