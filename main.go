@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/gpbbit/gb_go_web/yaloader"
 	"log"
 
 	"github.com/gpbbit/gb_go_web/searcher"
@@ -22,4 +23,12 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("Result array %v\n", result)
+	link := "https://yadi.sk/i/xV3LGCEwax8RfA"
+	fmt.Println("Download file ", link)
+	path, err := yaloader.FileLoader(link)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("File download to ", path)
+
 }
